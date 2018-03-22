@@ -1,0 +1,8 @@
+.fixed{
+    overflow: scroll;
+    height:calc(100% - 145px);
+}
+.weui-grids i
+{
+color:#009a61;
+}

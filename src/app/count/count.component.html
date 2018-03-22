@@ -1,0 +1,22 @@
+<div class="weui-panel__hd">
+  <span>当前记账金额为：</span>
+  <em>{{totalcount}}元</em>
+</div>
+<weui-navbar style='top:44px;'>
+  <weui-navbar-item  routerLink="/count/year" >年</weui-navbar-item>
+  <weui-navbar-item  routerLink="/count/month" >月</weui-navbar-item>
+</weui-navbar>
+<div class="charts"><router-outlet></router-outlet></div>
+
+<!-- <div class="weui-tab__panel">
+  <div class="weui-tab__content" [ngStyle]="{display: activeValue == '1' ? 'block' : 'none'}">
+      <div style="padding: 30px;">
+          <p class="page__desc">这是第一页</p>
+      </div>
+  </div>
+  <div class="weui-tab__content" [ngStyle]="{display: activeValue == '2' ? 'block' : 'none'}">
+      <div style="padding: 30px;">
+          <p class="page__desc">这是第二页</p>
+      </div>
+  </div>
+</div> -->

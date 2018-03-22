@@ -1,0 +1,19 @@
+<weui-navbar >
+  <weui-navbar-item >记录花销 记录生活</weui-navbar-item>
+</weui-navbar>
+<weui-toptips [content]="toastText" #TopTip></weui-toptips>
+<div style="margin-top: 50px;">
+  <!-- 金额输入框 -->
+  <weui-input style='font-size:25px;'type="number" name="num" placeholder="请输入金额" [(ngModel)]="money">
+    <label class="weui-label">￥</label>
+  </weui-input>
+  <!-- 九宫格按钮 -->
+  <div class="weui-grids" [ngStyle]="contentStyle">
+    <a href="javascript:#void(0);" (click)="add(b)"class="weui-grid" *ngFor="let b of billTypes">
+      <div class="weui-grid__icon">
+        <i  class="fa fa-2x {{b.icon}}" ></i>
+      </div>
+      <p class="weui-grid__label">{{b.name}}</p>
+    </a>
+  </div>
+</div>
