@@ -13,6 +13,7 @@ import { MonthcountComponent } from './monthcount/monthcount.component';
 import { AppRoutingModule } from './app-routing.module';
 import { EchartsNg2Module } from 'echarts-ng2';
 import {AccountService} from './account.service';
+import { AccountlistComponent } from './accountlist/accountlist.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -20,7 +21,8 @@ import {AccountService} from './account.service';
     AccountingComponent,
     CountComponent,
     YearcountComponent,
-    MonthcountComponent
+    MonthcountComponent,
+    AccountlistComponent
   ],
   imports: [
     CommonModule, FormsModule, BrowserModule, RouterModule, WeUIModule, AppRoutingModule, EchartsNg2Module

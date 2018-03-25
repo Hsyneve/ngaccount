@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ElementRef, ViewChild } from '@angular/core';
 import { WeUITopTips } from 'angular4-weui';
 import { AccountService } from '../account.service';
+import { AccountItem } from '../accountitem';
 @Component({
   selector: 'app-accounting',
   templateUrl: './accounting.component.html',
@@ -27,9 +28,14 @@ export class AccountingComponent implements OnInit {
 
   }
   add(obj) {
-
+    let billitem: AccountItem = new AccountItem();
+    billitem.icon = obj.icon;
+    billitem.name = obj.name;
+    billitem.typeid = obj.id;
+    billitem.date = new Date();
+    billitem.money = this.money*1;
     if (this.money > 0) {
-      this.service.AddBills(this.money);
+      this.service.AddBills(billitem);
       this.alert('记账成功');
     } else {
       this.alert('请输入金额');

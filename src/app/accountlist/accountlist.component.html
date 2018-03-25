@@ -1,0 +1,11 @@
+<!-- <div class="page__bd page__bd_spacing">
+<div (click)="showDatePicker()">{{today|date:"yyyy/MM/dd"}}</div></div>
+<weui-date-picker #picker3></weui-date-picker>  -->
+<weui-items [ngStyle]="contentStyle">
+<weui-item *ngFor="let a of accountlist">
+        <i weui-start class="fa {{a.icon}}" ></i>
+        <p weui-content>{{a.name}}<span>{{a.date|date:"yyyy/MM/dd"}}</span></p>
+        <p weui-last>¥{{a.money}}</p>
+</weui-item>
+</weui-items>
+

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { EChartOption } from 'echarts-ng2';
+import { AccountService } from '../account.service';
 @Component({
   selector: 'app-monthcount',
   templateUrl: './monthcount.component.html',
@@ -7,7 +8,26 @@ import { EChartOption } from 'echarts-ng2';
 })
 export class MonthcountComponent implements OnInit {
   option: EChartOption;
-  constructor() { }
+  monthlist = [10, 11, 12, 1, 2, 3];
+  barlist = [];
+  moneylist = [0, 0, 0, 0, 0, 0];
+  constructor(private service: AccountService) {
+    this.barlist = this.monthlist.map(item => {
+      return item.toString() + '月';
+
+    });
+
+    let index = -1;
+    this.service.getAccountList().forEach(item => {
+      index = (this.monthlist.findIndex(pieitem => {
+        return pieitem === item.date.getMonth() + 1;
+      }));
+      if (index >= 0) {
+        this.moneylist[index] += item.money;
+      }
+
+    });
+  }
 
   ngOnInit() {
     this.option = {
@@ -19,13 +39,15 @@ export class MonthcountComponent implements OnInit {
         data: ['金额/元']
       },
       xAxis: {
-        data: ["1月", "2月", "3月", "4月", "5月", "6月"]
+        data: this.barlist
+        // ["10月", "11月", "12月", "1月", "2月", "3月"]
       },
       yAxis: {},
       series: [{
         name: '金额/元',
         type: 'bar',
-        data: [5, 20, 36, 10, 10, 20]
+        data: this.moneylist
+        // [5, 20, 36, 10, 10, 20]
       }]
     };
   }

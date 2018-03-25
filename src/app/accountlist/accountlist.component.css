@@ -1,0 +1,15 @@
+.weui-item i
+{
+color:#009a61;
+width:30px;
+}
+.fixed{
+    overflow: scroll;
+    height:calc(100% - 145px);
+}
+/* p{
+    font-style: italic;
+} */
+p span{
+    font-size: 0.7em;
+}
