@@ -14,7 +14,7 @@ export class AccountlistComponent implements OnInit {
   today = new Date();
   contentStyle = {   // 绑定的样式
     'overflow': 'scroll',
-    'height': window.screen.availHeight - 145 + 'px'
+    'height': window.screen.availHeight - 155 + 'px'
   };
   // @ViewChild('picker3') picker3: WeUIDatePicker;
   constructor(private service: AccountService) {

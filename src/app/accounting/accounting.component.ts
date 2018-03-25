@@ -14,7 +14,7 @@ export class AccountingComponent implements OnInit {
   billTypes = []; // 记账类型
   contentStyle = {   // 绑定的样式
     'overflow': 'scroll',
-    'height': window.screen.availHeight - 145 + 'px'
+    'height': window.screen.availHeight - 175 + 'px'
   };
   @ViewChild('TopTip') TopTip: WeUITopTips;
   toastText = '';

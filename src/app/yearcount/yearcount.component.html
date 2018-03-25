@@ -1,3 +1,5 @@
+
+
 <a class="pie" href="javascript:void(0)" (click)="showPie=!showPie">饼状图</a>
 <a class="bar" href="javascript:void(0)" (click)="showPie=!showPie">柱状图</a>
 <!-- <weui-button color="primary" mini class="inline" (click)="showPie=!showPie">饼状图</weui-button>
@@ -5,4 +7,5 @@
 
 <echarts-ng2 *ngIf='showPie' [option]="option" ></echarts-ng2>
 <echarts-ng2 *ngIf='!showPie' [option]="option2" ></echarts-ng2>
+
 

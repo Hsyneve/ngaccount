@@ -14,8 +14,7 @@ export const BILLTYPES: BillType[] = [
     { id: 21, name: '买菜', icon: 'fa-hand-paper-o' },
     { id: 21, name: '请客', icon: 'fa-university' },
     { id: 21, name: '水电', icon: 'fa-id-card' },
-    { id: 21, name: '房租', icon: 'fa-life-ring' },
-    { id: 21, name: '其他', icon: 'fa-taxi' },
+    { id: 21, name: '房租', icon: 'fa-life-ring' }
 
 ]
     ;
